@@ -1,0 +1,33 @@
+.game {
+  position: relative;
+  padding: 50px 0 90px;
+
+  &.game-ended {
+    height: 100%;
+  }
+
+  &.bg-green {
+    background: #1A5F42;
+  }
+
+  &.bg-blue {
+    background: #48A9A6;
+  }
+
+  &.bg-orange {
+    background: #F17105;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 70%;
+    margin: 0 auto;
+    text-align: center;
+
+    &.hard,
+    &.triple {
+      max-width: 95%;
+    }
+  }
+}

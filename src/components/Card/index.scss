@@ -1,0 +1,50 @@
+.card {
+  position: relative;
+  width: calc(25% - 10px); 
+  background: url(../../assets/img/card.svg) center no-repeat;
+  background-size: 100%;
+  padding: 19% 0;
+  margin: 0 5px 8px;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    overflow: hidden;
+    content: url(../../assets/img/card-flipped.svg);
+  }
+
+  &.matched {
+    opacity: 0.5;
+  }
+
+  &.flipped {
+    background-image: url(../../assets/img/card-flipped.svg);
+
+    i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      font-size: calc(100% + 10vw);
+      font-style: normal;
+    }
+  }
+}
+
+.cards.hard,
+.cards.triple {
+  .card {
+    width: calc(12.5% - 10px);
+    padding: 9% 0;
+    margin-bottom: 10px;
+
+    &.flipped {
+      i {
+        font-size: calc(100% + 6vw);
+      }
+    }
+  }
+}
